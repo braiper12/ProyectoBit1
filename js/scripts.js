@@ -15,4 +15,25 @@ document.addEventListener('DOMContentLoaded', () => {
       navbar.innerHTML = data;
     })
     .catch(error => console.error('Error cargando navbar:', error)); 
+
+     fetch('partials/footer.html') 
+    .then(response => {
+      if (!response.ok) throw new Error('Error al cargar partials/footer.html');
+      return response.text();
+    })
+    .then(data => {
+      footer.innerHTML = data;
+    })
+    .catch(error => console.error('Error cargando footer:', error)); 
+
+
+      fetch('partials/services.html') 
+    .then(response => {
+      if (!response.ok) throw new Error('Error al cargar partials/services.html');
+      return response.text();
+    })
+    .then(data => {
+      services.innerHTML = data;
+    })
+    .catch(error => console.error('Error cargando services:', error)); 
    });
